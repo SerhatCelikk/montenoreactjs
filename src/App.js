@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import AOS from 'aos';
-
+import Web3ReactProvider from '@fewcha/web3-react';
 
 import { Route , Routes } from 'react-router-dom';
 
@@ -22,13 +22,14 @@ function App() {
         }); 
       }, []);
     return (
+        <Web3ReactProvider >
         <Routes >
             {
             routes.map((data,index) => (
                 <Route exact={true} path={data.path} element={data.component} key={index} />
             ))
             }
-        </Routes>
+        </Routes></Web3ReactProvider>
     );
 }
 

@@ -21,10 +21,23 @@ import Speciality from '../components/layouts/Speciality';
 import Team from '../components/layouts/Team';
 import Testimonial from '../components/layouts/Testimonial';
 import SliderOne from '../components/slider/SliderOne';
-
+import { useWeb3 } from "@fewcha/web3-react";
+import { ConnectWallet } from "@fewcha/web3-react";
 const Home01 = () => {
+    const web3 = useWeb3();
+const { init, account, balance, isConnected, connect, disconnect, network, txs, sdk, token } = web3;
+
+const connectWallet = () => {
+    connect();
+    console.log("connectWallet");
+    };
+
     return (
         <div>
+            <button onClick={()=>{console.log(isConnected,account,balance);}}>asdasdad</button>
+            <button onClick={connectWallet}>asdasdad</button>
+            <ConnectWallet />
+<ConnectWallet type="grid" />
             <Header />
             <SliderOne />
             <About />
