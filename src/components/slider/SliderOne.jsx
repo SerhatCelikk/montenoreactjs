@@ -52,45 +52,45 @@ const SliderOne = () => {
                 speed={2000}
               >
                 <SwiperSlide>
-                  <div className="item bg-2 ">
+                  <div className="item">
                     <img
-                      style={{ width: 160, height: 160 }}
+                      
                       src={item.item1}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                      
                       src={item.item2}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item">
                     <img
-                      style={{ width: 160, height: 160 }}
+                      
                       src={item.item3}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                      
                       src={item.item4}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                      
                       src={item.item5}
                       alt="Monteno"
                     />
@@ -98,18 +98,18 @@ const SliderOne = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item6}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item14}
                       alt="Monteno"
                     />
@@ -131,63 +131,63 @@ const SliderOne = () => {
                 speed={2000}
               >
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item8}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item9}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item10}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item11}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item12}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item17}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item7}
                       alt="Monteno"
                     />
@@ -208,63 +208,63 @@ const SliderOne = () => {
                 speed={2000}
               >
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item15}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item16}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item13}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item18}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item19}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-1">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item20}
                       alt="Monteno"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="item bg-2">
+                  <div className="item ">
                     <img
-                      style={{ width: 160, height: 160 }}
+                     
                       src={item.item21}
                       alt="Monteno"
                     />

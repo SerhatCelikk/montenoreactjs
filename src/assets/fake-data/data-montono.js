@@ -1,50 +1,50 @@
-import img1 from '../images/items/montono-01.png'
-import img2 from '../images/items/montono-02.png'
-import img3 from '../images/items/montono-03.png'
-import img4 from '../images/items/montono-04.png'
-import img5 from '../images/items/montono-05.png'
-import img6 from '../images/items/montono-06.png'
-import img7 from '../images/items/montono-07.png'
-import img8 from '../images/items/montono-08.png'
-import img9 from '../images/items/montono-09.png'
-import img10 from '../images/items/montono-10.png'
-import img11 from '../images/items/montono-11.png'
-import img12 from '../images/items/montono-12.png'
-import img13 from '../images/items/montono-13.png'
-import img14 from '../images/items/montono-14.png'
+import img1 from '../images/items/item-25.png'
+import img2 from '../images/items/item-26.png'
+import img3 from '../images/items/item-27.png'
+import img4 from '../images/items/item-28.png'
+import img5 from '../images/items/item-29.png'
+import img6 from '../images/items/item-30.png'
+import img7 from '../images/items/item-31.png'
+import img8 from '../images/items/item-32.png'
+import img9 from '../images/items/item-25.png'
+import img10 from '../images/items/item-25.png'
+import img11 from '../images/items/item-25.png'
+import img12 from '../images/items/item-25.png'
+import img13 from '../images/items/item-25.png'
+import img14 from '../images/items/item-25.png'
 
 const dataMontono = [
     {
         img: img1,
-        title: 'Monteno item 1'
+        title: 'Cherokee Puppy'
     },
     {
         img: img2,
-        title: 'Monteno item 2'
+        title: 'Business Bear'
     },
     {
         img: img3,
-        title: 'Monteno item 3'
+        title: 'Pirate Wolf'
     },
     {
         img: img4,
-        title: 'Monteno item 4'
+        title: 'MCDonalds Lion'
     },
     {
         img: img5,
-        title: 'Monteno item 5'
+        title: 'Party Mouse'
     },
     {
         img: img6,
-        title: 'Monteno item 6'
+        title: 'Hipster Horse'
     },
     {
         img: img7,
-        title: 'Monteno item 7'
+        title: 'Angel Frog'
     },
     {
         img: img8,
-        title: 'Monteno item 8'
+        title: 'Casual Dog'
     },
     {
         img: img9,

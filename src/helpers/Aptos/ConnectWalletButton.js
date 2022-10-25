@@ -28,7 +28,7 @@ const ConnectWalletButton = (props) => {
     return (
         <>
         {connectButton ? button : wallet.account?.address?.toString() !== undefined ? <span className="mx-auto w-100">{button}</span> : null}
-        <ConnectWalletModal show={showModal} onConnect={() => setShowModal(false)} />
+        <ConnectWalletModal  show={showModal} onConnect={() => setShowModal(false)} />
         </>
     )
 }

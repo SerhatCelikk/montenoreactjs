@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    
 }
 
 .section-about .item {
@@ -45,6 +46,10 @@
 
     img {
         animation: move 3s infinite linear;
+        width: 270px;
+        height: 320px;
+        border-radius: 20px;
+        
     }
 }
 

@@ -20,9 +20,17 @@ const item = {
   item19: require("../images/items/item-19.png"),
   item20: require("../images/items/item-20.png"),
   item21: require("../images/items/item-21.png"),
+  item22: require("../images/items/item-22.png"),
+  item23: require("../images/items/item-23.png"),
+  item24: require("../images/items/item-24.png"),
+  item25: require("../images/items/item-25.png"),
+  item26: require("../images/items/item-26.png"),
   item27: require("../images/items/item-27.png"),
   item28: require("../images/items/item-28.png"),
   item29: require("../images/items/item-29.png"),
+  item30: require("../images/items/item-30.png"),
+  item31: require("../images/items/item-31.png"),
+  item32: require("../images/items/item-32.png"),
   technology: require("../images/items/technology.png"),
 };
 
