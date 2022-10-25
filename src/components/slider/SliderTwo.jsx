@@ -22,13 +22,13 @@ const SliderTwo = () => {
                             <Link to="/about" className="btn-action style-2" data-aos="fade-up" data-aos-duration="1200" >Get Connected</Link>
 
                             <div className="shape">
-                                <div className="item bg-1"><img src={item.item11} alt="Monteno" /></div>
-                                <div className="item bg-2"><img src={item.item12} alt="Monteno" /></div>
-                                <div className="item bg-1"><img src={item.item13} alt="Monteno" /></div>
-                                <div className="item bg-1"><img src={item.item14} alt="Monteno" /></div>
-                                <div className="item bg-2"><img src={item.item6} alt="Monteno" /></div>
-                                <div className="item bg-2"><img src={item.item15} alt="Monteno" /></div>
-                                <div className="item bg-1"><img src={item.item16} alt="Monteno" /></div>
+                                <div className="item bg-1"><img style={{width:160, height:160}} src={item.item11} alt="Monteno" /></div>
+                                <div className="item bg-2"><img style={{width:160, height:160}} src={item.item12} alt="Monteno" /></div>
+                                <div className="item bg-1"><img style={{width:160, height:160}} src={item.item13} alt="Monteno" /></div>
+                                <div className="item bg-1"><img style={{width:160, height:160}} src={item.item14} alt="Monteno" /></div>
+                                <div className="item bg-2"><img style={{width:160, height:160}} src={item.item6} alt="Monteno" /></div>
+                                <div className="item bg-2"><img style={{width:160, height:160}} src={item.item15} alt="Monteno" /></div>
+                                <div className="item bg-1"><img style={{width:160, height:160}} src={item.item16} alt="Monteno" /></div>
                             </div>
                         </div>
                     </div>
