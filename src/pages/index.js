@@ -13,6 +13,7 @@ import BlogGrid from './BlogGrid';
 import BlogSingle from './BlogSingle';
 import FAQ from './FAQ';
 import Contact from './Contact';
+import Mint from './Mint';
 
 const routes = [
   { path: '/', component: <Home01 />},
@@ -29,6 +30,7 @@ const routes = [
   { path: '/blog-single', component: <BlogSingle />},
   { path: '/faq', component: <FAQ />},
   { path: '/contact', component: <Contact />},
+  { path: '/mint', component: <Mint />},
 ]
 
 export default routes;

@@ -6,7 +6,7 @@ const Montono = (props) => {
     const data = props.data;
 
     return (
-        <section className="tf-section montono">
+        <section id="collections" className="tf-section montono">
             <div className="container-fluid">
                 <div className="row">
                     {

@@ -6,7 +6,7 @@ const FAQ = (props) => {
     const data = props.data;
 
     return (
-        <section className="tf-section faq">
+        <section id="faq" className="tf-section faq">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
