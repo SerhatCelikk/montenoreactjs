@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import styles from '../../styles/Home.module.css'
 
 import {useWallet} from "@manahippo/aptos-wallet-adapter"
-
+import "./connect.css"
 import aptosLogo from "../../public/aptosLogo.png"
 import ConnectWalletModal from "./ConnectWalletModal"
 
@@ -20,8 +20,8 @@ const ConnectWalletButton = (props) => {
         wallet.disconnect()
     }
 
-    const button = <button disabled={disabled} className='{`${styles.connectWalletBtn} ${className} ${disabled ? "disabled" : ""}`}' onClick={handleButtonClick} style={style}>
-        <img src={aptosLogo.src} />
+    const button = <button disabled={disabled} className={`connectWalletBtn ${className} ${disabled ? "disabled" : ""}`} onClick={handleButtonClick} style={style}>
+      
         <h4 className="mb-0">{connectButton ? "Connect" : "Disconnect"}</h4>
     </button>
 

@@ -16,6 +16,7 @@ import cmHelper from "../helpers/candyMachineHelper";
 import Spinner from "react-bootstrap/Spinner";
 import Modal from "react-bootstrap/Modal";
 import ConnectWalletButton from "../helpers/Aptos/ConnectWalletButton";
+import "../css/mint.css";
 const aptosClient = new AptosClient(NODE_URL);
 const autoCmRefresh = 10000;
 

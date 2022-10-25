@@ -3,9 +3,11 @@ import { Link , useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
 
 import './header.scss';
-
+import {useWallet} from "@manahippo/aptos-wallet-adapter"
 import logo from '../../assets/fake-data/logo';
 import ButtonOne from '../button/ButtonOne';
+import ConnectWalletButton from '../../helpers/Aptos/ConnectWalletButton';
+import ConnectWalletModal from '../../helpers/Aptos/ConnectWalletModal';
 
 const Header = () => {
 
@@ -20,6 +22,7 @@ const Header = () => {
                 setScroll({});
             }
     }, []);
+    const wallet = useWallet()
 
 
     const [menuActive, setMenuActive] = useState(null);
@@ -76,7 +79,11 @@ const Header = () => {
                                     </ul>
                                 </nav>
                                 <div className="button">
-                                    <ButtonOne />
+                                    {/* <ButtonOne /> */}
+                                    <ConnectWalletButton
+                connectButton={!wallet.connected}
+                
+              />
                                 </div>
                                 
                                 <ul className="social">

@@ -2,7 +2,7 @@
 
 import {useWallet} from "@manahippo/aptos-wallet-adapter"
 import aptosLogo from "../../public/aptosLogo.png"
-
+import "./connect.css"
 import Modal from "react-bootstrap/Modal"
 
 const ConnectWalletModal = (props) => {
@@ -11,11 +11,11 @@ const ConnectWalletModal = (props) => {
     const wallet = useWallet()
 
     return (
-        <Modal id='{styles.connectWalletModal}' show={show} onHide={onConnect} centered>
-            <Modal.Body className="d-flex flex-column">
+        <Modal id='connectWalletModal' show={show} onHide={onConnect} centered>
+            <Modal.Body className="d-flex flex-column" style={{	flexDirection: "column"}}>
                 {wallet.wallets.map((walletType) => {
                     const adapter = walletType.adapter;
-                    return <button key={adapter.name} className='{styles.walletAdapterOption}' onClick={async () => {
+                    return <button key={adapter.name} className='{ walletAdapterOption } ' onClick={async () => {
                         await wallet.select(adapter.name);
                         onConnect();
                       }}>
