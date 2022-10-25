@@ -212,9 +212,9 @@ const Mint = () => {
       <link rel="icon" href="/favicon.ico" />
     </Head> */}
 
-          <main className="{styles.main}">
-            <h1 className="{styles.title}">{collectionName} Mint</h1>
-            <div className="{styles.topcorner}">
+          <main className="main">
+            <h1 className="title">{collectionName} Mint</h1>
+            <div className="topcorner">
               <ConnectWalletButton
                 connectButton={!wallet.connected}
                 className="d-flex"
@@ -237,7 +237,7 @@ const Mint = () => {
                 <>
                   <div className="d-flex align-items-center my-3">
                     <input
-                      className="{`${styles.defaultInput} me-3`}"
+                      className={`defaultInput me-3`}
                       type="number"
                       min="1"
                       max={
@@ -255,7 +255,7 @@ const Mint = () => {
                       }
                     />
                     <button
-                      className="{styles.button}"
+                      className="button"
                       onClick={mint}
                       disabled={!canMint}
                     >
