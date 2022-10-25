@@ -1,5 +1,5 @@
-
 import React from "react";
+import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import { AptosClient } from "aptos";
 import { useWallet } from "@manahippo/aptos-wallet-adapter";
@@ -199,157 +199,163 @@ const Mint = () => {
     );
   }, [wallet, candyMachineData, timeLeftToMint]);
 
-  return (<div>
-    {" "}
-    <Header />{" "}<div className="bg-gray-500">
-  <div className="{styles.container}">
-    {/* <Head>
+  return (
+    <div>
+      {" "}
+      <Header />{" "}
+      <div className="bg-gray-500">
+        <div className="{styles.container}">
+          {/* <Head>
       <title>Aptos NFT Mint</title>
       <meta name="description" content="Aptos NFT Mint" />
       <link rel="icon" href="/favicon.ico" />
     </Head> */}
 
-    <main className="{styles.main}">
-      <h1 className="{styles.title}">{collectionName} Mint</h1>
-      <div className="{styles.topcorner}">
-        <ConnectWalletButton
-          connectButton={!wallet.connected}
-          className="d-flex"
-        />
-      </div>
-      <img
-        src={collectionCoverUrl}
-        style={{ width: "480px", height: "480px" }}
-      />
-      <div
-        id="collection-info"
-        className="d-flex flex-column align-items-center text-white"
-        style={{ width: "80%" }}
-      >
-        {isFetchignCmData ? (
-          <Spinner animation="border" role="status" className="mt-5">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        ) : (
-          <>
-            <div className="d-flex align-items-center my-3">
-              <input
-                className="{`${styles.defaultInput} me-3`}"
-                type="number"
-                min="1"
-                max={
-                  candyMachineData.data.maxMintsPerWallet === undefined
-                    ? 10
-                    : Math.min(
-                        candyMachineData.data.maxMintsPerWallet,
-                        candyMachineData.data.numUploadedTokens -
-                          candyMachineData.data.numMintedTokens
-                      )
-                }
-                value={mintInfo.numToMint}
-                onChange={(e) =>
-                  setMintInfo({ ...mintInfo, numToMint: e.target.value })
-                }
+          <main className="{styles.main}">
+            <h1 className="{styles.title}">{collectionName} Mint</h1>
+            <div className="{styles.topcorner}">
+              <ConnectWalletButton
+                connectButton={!wallet.connected}
+                className="d-flex"
               />
-              <button
-                className="{styles.button}"
-                onClick={mint}
-                disabled={!canMint}
-              >
-                {mintInfo.minting ? (
-                  <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </Spinner>
-                ) : (
-                  "Mint"
-                )}
-              </button>
-              <h4 className="mx-3 mb-0">
-                {candyMachineData.data.mintFee * mintInfo.numToMint} $APT
-              </h4>
-              <span
-                style={{
-                  width: "15px",
-                  height: "15px",
-                  borderRadius: "50%",
-                  background: candyMachineData.data.isPublic
-                    ? "green"
-                    : "red",
-                }}
-              ></span>
             </div>
-            <h5>
-              {candyMachineData.data.numMintedTokens}/
-              {candyMachineData.data.numUploadedTokens} minted
-            </h5>
-            <div className="d-flex flex-column align-items-center my-3">
-              <h3 style={{ textDecoration: "underline" }}>Presale In:</h3>
-              <h6>
-                {timeLeftToMint.presale === "LIVE"
-                  ? "LIVE"
-                  : timeLeftToMint.presale.days +
-                    " days : " +
-                    timeLeftToMint.presale.hours +
-                    " hours : " +
-                    timeLeftToMint.presale.minutes +
-                    " minutes : " +
-                    timeLeftToMint.presale.seconds +
-                    " seconds"}
-              </h6>
+            <img
+              src={collectionCoverUrl}
+              style={{ width: "480px", height: "480px" }}
+            />
+            <div
+              id="collection-info"
+              className="d-flex flex-column align-items-center text-white"
+              style={{ width: "80%" }}
+            >
+              {isFetchignCmData ? (
+                <Spinner animation="border" role="status" className="mt-5">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              ) : (
+                <>
+                  <div className="d-flex align-items-center my-3">
+                    <input
+                      className="{`${styles.defaultInput} me-3`}"
+                      type="number"
+                      min="1"
+                      max={
+                        candyMachineData.data.maxMintsPerWallet === undefined
+                          ? 10
+                          : Math.min(
+                              candyMachineData.data.maxMintsPerWallet,
+                              candyMachineData.data.numUploadedTokens -
+                                candyMachineData.data.numMintedTokens
+                            )
+                      }
+                      value={mintInfo.numToMint}
+                      onChange={(e) =>
+                        setMintInfo({ ...mintInfo, numToMint: e.target.value })
+                      }
+                    />
+                    <button
+                      className="{styles.button}"
+                      onClick={mint}
+                      disabled={!canMint}
+                    >
+                      {mintInfo.minting ? (
+                        <Spinner animation="border" role="status">
+                          <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                      ) : (
+                        "Mint"
+                      )}
+                    </button>
+                    <h4 className="mx-3 mb-0">
+                      {candyMachineData.data.mintFee * mintInfo.numToMint} $APT
+                    </h4>
+                    <span
+                      style={{
+                        width: "15px",
+                        height: "15px",
+                        borderRadius: "50%",
+                        background: candyMachineData.data.isPublic
+                          ? "green"
+                          : "red",
+                      }}
+                    ></span>
+                  </div>
+                  <h5>
+                    {candyMachineData.data.numMintedTokens}/
+                    {candyMachineData.data.numUploadedTokens} minted
+                  </h5>
+                  <div className="d-flex flex-column align-items-center my-3">
+                    <h3 style={{ textDecoration: "underline" }}>Presale In:</h3>
+                    <h6>
+                      {timeLeftToMint.presale === "LIVE"
+                        ? "LIVE"
+                        : timeLeftToMint.presale.days +
+                          " days : " +
+                          timeLeftToMint.presale.hours +
+                          " hours : " +
+                          timeLeftToMint.presale.minutes +
+                          " minutes : " +
+                          timeLeftToMint.presale.seconds +
+                          " seconds"}
+                    </h6>
+                  </div>
+                  <div className="d-flex flex-column align-items-center my-3">
+                    <h3 style={{ textDecoration: "underline" }}>Public In:</h3>
+                    <h6>
+                      {timeLeftToMint.public === "LIVE"
+                        ? "LIVE"
+                        : timeLeftToMint.public.days +
+                          " days : " +
+                          timeLeftToMint.public.hours +
+                          " hours : " +
+                          timeLeftToMint.public.minutes +
+                          " minutes : " +
+                          timeLeftToMint.public.seconds +
+                          " seconds"}
+                    </h6>
+                  </div>
+                </>
+              )}
             </div>
-            <div className="d-flex flex-column align-items-center my-3">
-              <h3 style={{ textDecoration: "underline" }}>Public In:</h3>
-              <h6>
-                {timeLeftToMint.public === "LIVE"
-                  ? "LIVE"
-                  : timeLeftToMint.public.days +
-                    " days : " +
-                    timeLeftToMint.public.hours +
-                    " hours : " +
-                    timeLeftToMint.public.minutes +
-                    " minutes : " +
-                    timeLeftToMint.public.seconds +
-                    " seconds"}
-              </h6>
-            </div>
-          </>
-        )}
-      </div>
 
-      <Modal
-        id="mint-results-modal"
-        show={mintInfo.success}
-        onHide={() =>
-          setMintInfo({ ...mintInfo, success: false, mintedNfts: [] })
-        }
-        centered
-        size="lg"
-      >
-        <Modal.Body className="d-flex flex-column align-items-center pt-5 pb-3">
-          <div
-            className="d-flex justify-content-center w-100 my-5"
-            style={{ flexWrap: "wrap" }}
-          >
-            {mintInfo.mintedNfts.map((mintedNft) => (
-              <div
-                key={mintedNft.name}
-                className="{`${styles.mintedNftCard} d-flex flex-column mx-3`}"
-              >
-                <img
-                  src={
-                    mintedNft.imageUri === null ? "" : mintedNft.imageUri
-                  }
-                />
-                <h5 className="text-white text-center mt-2">
-                  {mintedNft.name}
-                </h5>
-              </div>
-            ))}
-          </div>
-        </Modal.Body>
-      </Modal>
-    </main>
-  </div></div></div>
-  );}
+            <Modal
+              id="mint-results-modal"
+              show={mintInfo.success}
+              onHide={() =>
+                setMintInfo({ ...mintInfo, success: false, mintedNfts: [] })
+              }
+              centered
+              size="lg"
+            >
+              <Modal.Body className="d-flex flex-column align-items-center pt-5 pb-3">
+                <div
+                  className="d-flex justify-content-center w-100 my-5"
+                  style={{ flexWrap: "wrap" }}
+                >
+                  {mintInfo.mintedNfts.map((mintedNft) => (
+                    <div
+                      key={mintedNft.name}
+                      className="{`${styles.mintedNftCard} d-flex flex-column mx-3`}"
+                    >
+                      <img
+                        src={
+                          mintedNft.imageUri === null ? "" : mintedNft.imageUri
+                        }
+                      />
+                      <h5 className="text-white text-center mt-2">
+                        {mintedNft.name}
+                      </h5>
+                    </div>
+                  ))}
+                </div>
+              </Modal.Body>
+            </Modal>
+          </main>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 export default Mint;

@@ -28,10 +28,10 @@ body {
   font-weight: 400;
   color: $white;
   padding-top: $header-height;
-  background-image: url('../src/assets/images/background/bg-element.jpg');
+  background:#74a7a2;
 
   &.home-1 {
-      background-image: url('../src/assets/images/background/bg-element.jpg');
+      background:#74a7a2;
   }
   &.home-2 {
       background-image: url('../src/assets/images/background/bg-element-2.jpg');

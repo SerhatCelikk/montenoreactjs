@@ -9,13 +9,15 @@
     height: $header-height;
     @include flex(center,center);
     transition: all 0.3s ease-in-out;
+    background-image: url('https://pbs.twimg.com/profile_banners/1441809708709335040/1647176213/1500x500');
 
     &.is-fixed {
         position: fixed;
         top: 0;
         box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 30%);
-        background: #200b6a;
+        background: #214249;
         height: $header-shrink-height;
+        
     }
 
     .header__right {
