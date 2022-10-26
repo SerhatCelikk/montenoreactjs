@@ -8,6 +8,8 @@ import {
   collectionName,
   collectionCoverUrl,
   NODE_URL,
+  CONTRACT_ADDRESS, 
+  COLLECTION_SIZE
 } from "../helpers/candyMachineInfo";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -22,183 +24,126 @@ const autoCmRefresh = 10000;
 
 const Mint = () => {
   const wallet = useWallet();
-  const [isFetchignCmData, setIsFetchignCmData] = useState(false);
-  const [candyMachineData, setCandyMachineData] = useState({
-    data: {},
-    fetch: fetchCandyMachineData,
-  });
-  const [timeLeftToMint, setTimeLeftToMint] = useState({
-    presale: "",
-    public: "",
-    timeout: null,
-  });
+  const [isFetchignCmData, setIsFetchignCmData] = useState(false)
+  const [candyMachineData, setCandyMachineData] = useState({data: {}, fetch: fetchCandyMachineData})
+  const [timeLeftToMint, setTimeLeftToMint] = useState({presale: "", public: "", timeout: null})
 
-  const [mintInfo, setMintInfo] = useState({
-    numToMint: 1,
-    minting: false,
-    success: false,
-    mintedNfts: [],
-  });
+  const [mintInfo, setMintInfo] = useState({numToMint: 1, minting: false, success: false, mintedNfts: []})
 
-  const [canMint, setCanMint] = useState(false);
+  const [canMint, setCanMint] = useState(false)
 
   useEffect(() => {
     if (!wallet.autoConnect && wallet.wallet?.adapter) {
-      wallet.connect();
+        wallet.connect();
     }
+    console.log(candyMachineData)
   }, [wallet.autoConnect, wallet.wallet, wallet.connect]);
 
   const mint = async () => {
-    if (wallet.account?.address?.toString() === undefined || mintInfo.minting)
-      return;
+    if (wallet.account?.address?.toString() === undefined || mintInfo.minting) return;
 
     console.log(wallet.account?.address?.toString());
-    setMintInfo({ ...mintInfo, minting: true });
+    setMintInfo({...mintInfo, minting: true})
     // Generate a transaction
     const payload = {
       type: "entry_function_payload",
-      function:
-        "0xc071ef709539f7f9372f16050bf984fe6f11850594b8394f11bc74d22f48836b::candy_machine_v2::mint_tokens",
+      function: `${CONTRACT_ADDRESS}::candy_machine_v2::mint_tokens`,
       type_arguments: [],
-      arguments: [candyMachineAddress, collectionName, mintInfo.numToMint],
+      arguments: [
+      	candyMachineAddress,
+	      collectionName,
+	      mintInfo.numToMint,
+      ]
     };
+    console.log(payload)
 
     let txInfo;
     try {
       const txHash = await wallet.signAndSubmitTransaction(payload);
       console.log(txHash);
-      txInfo = await aptosClient.waitForTransactionWithResult(txHash.hash);
+      txInfo = await aptosClient.waitForTransactionWithResult(txHash.hash)
     } catch (err) {
       txInfo = {
         success: false,
         vm_status: err.message,
-      };
+      }
     }
-    handleMintTxResult(txInfo);
-    if (txInfo.success)
-      setCandyMachineData({
-        ...candyMachineData,
-        data: {
-          ...candyMachineData.data,
-          numMintedTokens: (
-            parseInt(candyMachineData.data.numMintedTokens) +
-            parseInt(mintInfo.numToMint)
-          ).toString(),
-        },
-      });
-  };
+    handleMintTxResult(txInfo)
+    if (txInfo.success) setCandyMachineData({...candyMachineData, data: {...candyMachineData.data, numMintedTokens: (parseInt(candyMachineData.data.numMintedTokens) + parseInt(mintInfo.numToMint)).toString()}})
+  }
 
   async function handleMintTxResult(txInfo) {
     console.log(txInfo);
     const mintSuccess = txInfo.success;
-    console.log(
-      mintSuccess ? "Mint success!" : `Mint failure, an error occured.`
-    );
+    console.log(mintSuccess ? "Mint success!" : `Mint failure, an error occured.`)
 
-    let mintedNfts = [];
+    let mintedNfts = []
     if (!mintSuccess) {
-      /// Handled error messages
-      const handledErrorMessages = new Map([
-        ["Failed to sign transaction", "An error occured while signing."],
-        [
-          "Move abort in 0x1::coin: EINSUFFICIENT_BALANCE(0x10006): Not enough coins to complete transaction",
-          "Insufficient funds to mint.",
-        ],
-      ]);
+        /// Handled error messages
+        const handledErrorMessages = new Map([
+            ["Failed to sign transaction", "An error occured while signing."],
+            ["Move abort in 0x1::coin: EINSUFFICIENT_BALANCE(0x10006): Not enough coins to complete transaction", "Insufficient funds to mint."],
+        ]);
 
-      const txStatusError = txInfo.vm_status;
-      console.error(`Mint not successful: ${txStatusError}`);
-      let errorMessage = handledErrorMessages.get(txStatusError);
-      errorMessage =
-        errorMessage === undefined
-          ? "Unkown error occured. Try again."
-          : errorMessage;
+        const txStatusError = txInfo.vm_status;
+        console.error(`Mint not successful: ${txStatusError}`);
+        let errorMessage = handledErrorMessages.get(txStatusError);
+        errorMessage = errorMessage === undefined ? "Unkown error occured. Try again." : errorMessage;
 
-      toast.error(errorMessage);
+        toast.error(errorMessage);
     } else {
-      mintedNfts = await cmHelper.getMintedNfts(
-        aptosClient,
-        candyMachineData.data.tokenDataHandle,
-        candyMachineData.data.cmResourceAccount,
-        collectionName,
-        txInfo
-      );
-      toast.success("Minting success!");
+        mintedNfts = await cmHelper.getMintedNfts(aptosClient, candyMachineData.data.tokenDataHandle, candyMachineData.data.cmResourceAccount, collectionName, txInfo)
+        toast.success("Minting success!")
     }
 
-    setMintInfo({
-      ...mintInfo,
-      minting: false,
-      success: mintSuccess,
-      mintedNfts,
-    });
-  }
+    
+    setMintInfo({...mintInfo, minting: false, success: mintSuccess, mintedNfts})
+}
+
+
 
   async function fetchCandyMachineData(indicateIsFetching = false) {
-    console.log("Fetching candy machine data...");
-    if (indicateIsFetching) setIsFetchignCmData(true);
+    console.log("Fetching candy machine data...")
+    if (indicateIsFetching) setIsFetchignCmData(true)
     const cmResourceAccount = await cmHelper.getCandyMachineResourceAccount();
+    console.log(cmResourceAccount)
     if (cmResourceAccount === null) {
-      setCandyMachineData({ ...candyMachineData, data: {} });
-      setIsFetchignCmData(false);
-      return;
+      setCandyMachineData({...candyMachineData, data: {}})
+      setIsFetchignCmData(false)
+      return
     }
 
-    const collectionInfo = await cmHelper.getCandyMachineCollectionInfo(
-      cmResourceAccount
-    );
-    const configData = await cmHelper.getCandyMachineConfigData(
-      collectionInfo.candyMachineConfigHandle
-    );
-    setCandyMachineData({
-      ...candyMachineData,
-      data: { cmResourceAccount, ...collectionInfo, ...configData },
-    });
-    setIsFetchignCmData(false);
+    const collectionInfo = await cmHelper.getCandyMachineCollectionInfo(cmResourceAccount);
+    const configData = await cmHelper.getCandyMachineConfigData(collectionInfo.candyMachineConfigHandle);
+    setCandyMachineData({...candyMachineData, data: {cmResourceAccount, ...collectionInfo, ...configData}})
+    setIsFetchignCmData(false)
   }
 
   function verifyTimeLeftToMint() {
-    const mintTimersTimeout = setTimeout(verifyTimeLeftToMint, 1000);
-    if (
-      candyMachineData.data.presaleMintTime === undefined ||
-      candyMachineData.data.publicMintTime === undefined
-    )
-      return;
+    const mintTimersTimeout = setTimeout(verifyTimeLeftToMint, 1000)
+    if (candyMachineData.data.presaleMintTime === undefined || candyMachineData.data.publicMintTime === undefined) return
 
     const currentTime = Math.round(new Date().getTime() / 1000);
-    setTimeLeftToMint({
-      timeout: mintTimersTimeout,
-      presale: cmHelper.getTimeDifference(
-        currentTime,
-        candyMachineData.data.presaleMintTime
-      ),
-      public: cmHelper.getTimeDifference(
-        currentTime,
-        candyMachineData.data.publicMintTime
-      ),
-    });
+    setTimeLeftToMint({timeout : mintTimersTimeout, presale: cmHelper.getTimeDifference(currentTime, candyMachineData.data.presaleMintTime), public: cmHelper.getTimeDifference(currentTime, candyMachineData.data.publicMintTime)})
   }
 
   useEffect(() => {
-    fetchCandyMachineData(true);
-    setInterval(fetchCandyMachineData, autoCmRefresh);
-  }, []);
+    fetchCandyMachineData(true)
+    setInterval(fetchCandyMachineData, autoCmRefresh)
+  }, [])
 
   useEffect(() => {
-    clearTimeout(timeLeftToMint.timeout);
-    verifyTimeLeftToMint();
-    console.log(candyMachineData.data);
-  }, [candyMachineData]);
+    clearTimeout(timeLeftToMint.timeout)
+    verifyTimeLeftToMint()
+    console.log(candyMachineData.data)
+  }, [candyMachineData])
 
+  // useEffect(() => {
+  //   setCanMint(wallet.connected && candyMachineData.data.isPublic && parseInt(candyMachineData.data.numUploadedTokens) > parseInt(candyMachineData.data.numMintedTokens) && timeLeftToMint.presale === "LIVE")
+  // }, [wallet, candyMachineData, timeLeftToMint])
   useEffect(() => {
-    setCanMint(
-      wallet.connected &&
-        candyMachineData.data.isPublic &&
-        parseInt(candyMachineData.data.numUploadedTokens) >
-          parseInt(candyMachineData.data.numMintedTokens) &&
-        timeLeftToMint.presale === "LIVE"
-    );
-  }, [wallet, candyMachineData, timeLeftToMint]);
+    setCanMint(true)
+  }, [wallet, candyMachineData, timeLeftToMint])
 
   return (
     <div>
@@ -282,8 +227,7 @@ const Mint = () => {
                     ></span>
                   </div>
                   <h5>
-                    {candyMachineData.data.numMintedTokens}/
-                    {candyMachineData.data.numUploadedTokens} minted
+                  {candyMachineData.data.numMintedTokens}/ {COLLECTION_SIZE} minted
                   </h5>
                   <div className="d-flex flex-column align-items-center my-3">
                     <h3 style={{ textDecoration: "underline" }}>Presale In:</h3>
