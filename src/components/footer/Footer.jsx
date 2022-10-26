@@ -47,9 +47,9 @@ const Footer = () => {
               <ul className="social">
                 
                 <li data-aos="fade-up" data-aos-duration="1200">
-                 <Link to="#" >
+                 <a href="https://twitter.com/animalclubnft" target="_blank">
                     <i className="fab fa-twitter" ></i>
-                  </Link>
+                  </a>
                 </li>
                 
               </ul>
