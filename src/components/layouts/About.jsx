@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <section    className="tf-section section-about mt--0">
-      <div id="about"className="container">
+      <div id="about"className="container mt--0">
         <div className="row reverse">
           <div  className="col-xl-7 col-md-12 mt-107">
             <div  className="group-image ">
