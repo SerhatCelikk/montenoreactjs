@@ -280,7 +280,7 @@ const Mint = () => {
                   {mintInfo.mintedNfts.map((mintedNft) => (
                     <div
                       key={mintedNft.name}
-                      className="{`${styles.mintedNftCard} d-flex flex-column mx-3`}"
+                      className={`mintedNftCard d-flex flex-column mx-3`}
                     >
                       <img
                         src={
