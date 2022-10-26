@@ -17,13 +17,13 @@ const SliderOne = () => {
         <div className="row">
           <div className="col-xl-5 col-md-6 col-12">
             <div className="block-text pt-24">
-              <h6 className="sub-title mb-6" data-aos="fade-up">
+              <h6 className="sub-title" data-aos="fade-up">
                 {datatext.subtitle}
               </h6>
-              <h2 className="title mb-26" data-aos="fade-up">
+              <h2 className="" data-aos="fade-up">
                 {datatext.title}
               </h2>
-              <p className="desc mb-43" data-aos="fade-up">
+              <p className="" data-aos="fade-up">
                 {datatext.desc}
               </p>
               <Link

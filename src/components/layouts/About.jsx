@@ -38,21 +38,21 @@ const About = () => {
           <div className="col-xl-5 col-md-12">
             <div className="block-text pt-12">
               <h5
-                className="sub-title mb-10"
+                className="sub-title "
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
                 {data.subtitle}
               </h5>
               <h3
-                className="title mb-58"
+                className=""
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
                 {data.title}
               </h3>
               <p
-                className="fs-21 mb-33"
+                className=""
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >

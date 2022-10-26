@@ -17,9 +17,9 @@ const Speciality = (props) => {
                 <div className="row">
                     <div className="col-xl-5 col-md-12">
                         <div className="block-text pt-128 pd-0">
-                            <h5 className="sub-title mb-10" data-aos="fade-up" data-aos-duration="1000">{datatext.subtitle}</h5>
-                            <h3 className="title mb-28" data-aos="fade-up" data-aos-duration="1000">{datatext.title}</h3>
-                            <p className="fs-21" data-aos="fade-up" data-aos-duration="1000">{datatext.desc}</p>
+                            <h5 className="sub-title" data-aos="fade-up" data-aos-duration="1000">{datatext.subtitle}</h5>
+                            <h3 className="" data-aos="fade-up" data-aos-duration="1000">{datatext.title}</h3>
+                            <p className="" data-aos="fade-up" data-aos-duration="1000">{datatext.desc}</p>
                         </div>
                     </div>
                     <div className="col-xl-7 col-md-12">
