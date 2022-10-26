@@ -1,11 +1,11 @@
-export const candyMachineAddress = "0x2bddbb4e01c8e68aee22b50b9eec77fe8da3ebd0149cd1e9fee8ff3537e54f0c";
+export const candyMachineAddress = "0x64e810595f088f7ec105ee069a7c25cb7ab67a7e67fb677a4799fb584d6735f3";
 export const collectionName = "TestCollection101"; // Case sensitive!
 export const collectionCoverUrl = "https://cloudflare-ipfs.com/ipfs/QmeCuKGLvAGrBAPGdaRh2hkTjXsXuk8VEUHNoYRD4cJG51";
 export const mode = "dev"; // "dev" or "test" or "mainnet"
 
 export let NODE_URL;
-export const CONTRACT_ADDRESS = "0xdf5c814388f4162f353e14f6123fcba8f39a958e4a2640e38e9e2c7cdfd2ac1d";
-export const COLLECTION_SIZE = 2
+export const CONTRACT_ADDRESS = "0xf7b81362cb099f5f48df721dd2db9bd2c1832b31394540101acdb91e1d7b4d4a";
+export const COLLECTION_SIZE = 10
 let FAUCET_URL;
 if (mode == "dev") {
     NODE_URL = "https://fullnode.devnet.aptoslabs.com/v1";
