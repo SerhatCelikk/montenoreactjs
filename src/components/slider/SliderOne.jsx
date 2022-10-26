@@ -6,7 +6,7 @@ import item from "../../assets/fake-data/item";
 
 const SliderOne = () => {
   const [datatext] = useState({
-    subtitle: "We are Monteno NFT",
+    subtitle: "We are The Animal Club NFT",
     title: "Collect Next Generation NFTs Today",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
   });
