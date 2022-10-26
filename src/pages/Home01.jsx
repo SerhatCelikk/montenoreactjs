@@ -30,7 +30,7 @@ const Home01 = () => {
       <About />
       <Speciality data={dataCard} />   
       <Montono  data={dataMontono} />    
-      <Partners data={dataPartners} />     
+      {/* <Partners data={dataPartners} />     */}
       <FAQ data={dataFaq} />
       <Action />
       <Footer />

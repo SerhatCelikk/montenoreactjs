@@ -12,7 +12,7 @@ const ConnectWalletModal = (props) => {
 
     return (
         <Modal    id='connectWalletModal' show={show} onHide={onConnect} centered>
-            <Modal.Body id="xx"  className="d-flex flex-column" style={{	flexDirection: "column" }}>
+            <Modal.Body id="modalbody"  className="d-flex flex-column" style={{	flexDirection: "column" }}>
                 {wallet.wallets.map((walletType) => {
                     const adapter = walletType.adapter;
                     return <button id="adapterbutton" key={adapter.name} className='{ walletAdapterOption } ' onClick={async () => {

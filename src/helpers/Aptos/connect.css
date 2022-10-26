@@ -173,7 +173,8 @@
   .walletAdapterOption img {
     width: 30px;
     height: 30px;
-    margin-right: 1rem;
+    
+    ;
   
     transition: all .4s;
   }
@@ -202,8 +203,9 @@
   }
 
   #connectt{font-size: 18px;}
-  #adapterbutton{border-radius: 3rem;}
-  #xx{background-color: #214249; border:solid #33ddaa;
+  #adapterbutton{border-radius: 3rem;
+  align-items: center;}
+  #modalbody{background-color: #214249; border:solid #33ddaa;
     
     
   }
