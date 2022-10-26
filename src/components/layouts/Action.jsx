@@ -20,7 +20,9 @@ const Action = () => {
                                 <h3 className="mb-13">{data.title}</h3>
                                 <p className="fs-21 mb-7">{data.desc}</p>
                             </div>
-                            <Link to="/contact" className="btn-action style-2">Join Now</Link>
+                            <Link to="#" className="btn-action style-2">
+                                Join Now
+                                </Link>
                         </div>
                     </div>
                 </div>

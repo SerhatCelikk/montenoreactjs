@@ -27,7 +27,7 @@ const SliderOne = () => {
                 {datatext.desc}
               </p>
               <Link
-                to="/about"
+                to="/mint"
                 className="btn-action style-2"
                 data-aos="fade-up"
                 data-aos-duration="1200"

@@ -67,7 +67,7 @@ const About = () => {
                 {data.desc2}
               </p>
               <Link
-                to="/about"
+                to="#"
                 className="btn-action style-2"
                 data-aos="fade-up"
                 data-aos-duration="1200"

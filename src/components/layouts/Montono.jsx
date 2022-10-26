@@ -15,7 +15,9 @@ const Montono = (props) => {
                                 <div className="image-box" data-aos="fade-up" data-aos-duration="1000">
                                     <img src={data.img} alt="Monteno" />
                                     <div className="image-box__title ">
-                                        <Link to="/collections" className="h6">{data.title}</Link>
+                                        {/* <Link to="/collections" className="h6"> */}
+                                            {data.title}
+                                            {/* </Link> */}
                                     </div>
                                 </div>
                             </div>
