@@ -34,7 +34,7 @@
   }
   
   .button:hover {
-    background: #389478;
+    
   }
   
   .button:disabled {
@@ -119,12 +119,14 @@
     color: white;
     background: #33ddaa;
     border: none;
-    border-radius: .5rem;
+    border-radius: .3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .5rem 1rem;
-  }
+  } 
+  
+ 
   
   .connectWalletBtn img {
     width: 20px;
@@ -146,9 +148,9 @@
   
   .modal-content {
     width: fit-content;
-    background: #333333;
+    background: #214249;
     color: white;
-    padding: 2rem 1rem;
+    padding: 0px;
     margin: 0 auto;
   }
   
@@ -198,3 +200,12 @@
     /* z-index: 100; */
     transition: all .4s;
   }
+
+  #connectt{font-size: 18px;}
+  #adapterbutton{border-radius: 3rem;}
+  #xx{background-color: #214249; border:solid #33ddaa;
+    
+    
+  }
+
+

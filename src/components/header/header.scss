@@ -278,10 +278,13 @@
             font-size: 0.1rem;
             cursor: pointer;
             transition: all .4s;
+           
             @include mobile {
                 display: none;
             }
         }
+       
+        
         .social {
             @include flex(center,flex-end);
             margin-right: 15px;

@@ -80,7 +80,7 @@ const Header = () => {
                                 </nav>
                                 <div className="button">
                                     {/* <ButtonOne /> */}
-                                    <ConnectWalletButton
+                                    <ConnectWalletButton 
                 connectButton={!wallet.connected}
                 
               />

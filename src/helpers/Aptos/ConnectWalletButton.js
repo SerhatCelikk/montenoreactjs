@@ -20,16 +20,16 @@ const ConnectWalletButton = (props) => {
         wallet.disconnect()
     }
 
-    const button = <button disabled={disabled} className={`connectWalletBtn ${className} ${disabled ? "disabled" : ""}`} onClick={handleButtonClick} style={style}>
+    const button = <button disabled={disabled} className={`connectWalletBtn ${className} ${disabled ? "disabled" : ""}`}  onClick={handleButtonClick} style={style}>
       
-        <h4 className="mb-0">{connectButton ? "Connect" : "Disconnect"}</h4>
+        <h4 className="mb-0 " id="connectt">{connectButton ? "Connect" : "Disconnect"}</h4>
     </button>
 
     return (
-        <>
+        <div >
         {connectButton ? button : wallet.account?.address?.toString() !== undefined ? <span className="mx-auto w-100">{button}</span> : null}
         <ConnectWalletModal  show={showModal} onConnect={() => setShowModal(false)} />
-        </>
+        </div>
     )
 }
 

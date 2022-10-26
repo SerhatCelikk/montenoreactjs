@@ -11,11 +11,11 @@ const ConnectWalletModal = (props) => {
     const wallet = useWallet()
 
     return (
-        <Modal id='connectWalletModal' show={show} onHide={onConnect} centered>
-            <Modal.Body className="d-flex flex-column" style={{	flexDirection: "column"}}>
+        <Modal    id='connectWalletModal' show={show} onHide={onConnect} centered>
+            <Modal.Body id="xx"  className="d-flex flex-column" style={{	flexDirection: "column" }}>
                 {wallet.wallets.map((walletType) => {
                     const adapter = walletType.adapter;
-                    return <button key={adapter.name} className='{ walletAdapterOption } ' onClick={async () => {
+                    return <button id="adapterbutton" key={adapter.name} className='{ walletAdapterOption } ' onClick={async () => {
                         await wallet.select(adapter.name);
                         onConnect();
                       }}>
