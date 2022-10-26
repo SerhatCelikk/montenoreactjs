@@ -229,9 +229,8 @@ const Mint = () => {
                   <h5>
                   {candyMachineData.data.numMintedTokens}/ {COLLECTION_SIZE} minted
                   </h5>
-                  <div className="d-flex flex-column align-items-center my-3">
-                    <h3 style={{ textDecoration: "underline" }}>Presale In:</h3>
-                    <h6>
+                  <div className="d-flex flex-column align-items-center my-3" >
+                    <h3 >Presale In :  <span id="live">
                       {timeLeftToMint.presale === "LIVE"
                         ? "LIVE"
                         : timeLeftToMint.presale.days +
@@ -242,11 +241,11 @@ const Mint = () => {
                           " minutes : " +
                           timeLeftToMint.presale.seconds +
                           " seconds"}
-                    </h6>
+                    </span></h3>
+                    
                   </div>
-                  <div className="d-flex flex-column align-items-center my-3">
-                    <h3 style={{ textDecoration: "underline" }}>Public In:</h3>
-                    <h6>
+                  <div className="d-flex flex-column align-items-center my-3 " >
+                    <h3 >Public In :  <span id="live">
                       {timeLeftToMint.public === "LIVE"
                         ? "LIVE"
                         : timeLeftToMint.public.days +
@@ -257,7 +256,8 @@ const Mint = () => {
                           " minutes : " +
                           timeLeftToMint.public.seconds +
                           " seconds"}
-                    </h6>
+                    </span></h3>
+                    
                   </div>
                 </>
               )}

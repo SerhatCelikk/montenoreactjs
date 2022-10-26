@@ -8,7 +8,7 @@ const Montono = (props) => {
     return (
         <section   id="collections"  className="tf-section montono   pb-20 ">
             <div  className="container-fluid ">
-                <div   className="row  mt-107">
+                <div   className="row  pt-95">
                     {
                         data.slice(0,8).map((data,index) => (
                             <div key={index} className="col-xl-3 col-md-6" >

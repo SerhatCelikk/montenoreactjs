@@ -1,6 +1,6 @@
 @use './../../scss/' as *;
 .hero-slider {
-    padding: 85px 0;
+    padding: 0px 0;
     @include tablet {
         padding: 0;
     }

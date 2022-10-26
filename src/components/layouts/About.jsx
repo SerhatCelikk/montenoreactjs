@@ -15,7 +15,7 @@ const About = () => {
   });
 
   return (
-    <section    className="tf-section section-about mt--0">
+    <section    className="tf-section section-about mt--0 pb-100">
       <div id="about"className="container mt--0">
         <div className="row reverse">
           <div  className="col-xl-7 col-md-12 mt-107">
