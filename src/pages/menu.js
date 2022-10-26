@@ -16,12 +16,12 @@ const menus = [
         name: 'Collections',
         links: '/#collections'
     },
-    {
+    /*{
         id: 4,
         name: 'Partners',
         links: '/#partners',
         
-    },
+    },*/
     {
         id: 5,
         name: 'FAQ',
