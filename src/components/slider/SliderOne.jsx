@@ -12,7 +12,7 @@ const SliderOne = () => {
   });
 
   return (
-    <section className="tf-section hero-slider">
+    <section  className="tf-section hero-slider mt--0 mb-0 pb-0  ">
       <div className="container">
         <div className="row">
           <div className="col-xl-5 col-md-6 col-12">

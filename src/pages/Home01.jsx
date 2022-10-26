@@ -25,11 +25,11 @@ import SliderOne from "../components/slider/SliderOne";
 const Home01 = () => {
   return (
     <div>     
-      <Header />
+      <Header  />
       <SliderOne />
       <About />
       <Speciality data={dataCard} />   
-      <Montono data={dataMontono} />    
+      <Montono  data={dataMontono} />    
       <Partners data={dataPartners} />     
       <FAQ data={dataFaq} />
       <Action />

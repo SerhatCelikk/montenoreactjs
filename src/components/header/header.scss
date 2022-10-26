@@ -2,6 +2,7 @@
 
 .header {
     position: fixed;
+    margin-bottom: 0px;
     top: 0;
     left: 0;
     width: 100%;
@@ -18,10 +19,13 @@
         background: #214249;
         height: $header-shrink-height;
         
+        
+        
     }
 
     .header__right {
         @include flex(center,flex-end);
+        
 
         .mobile-button {
             display: none;
@@ -269,9 +273,9 @@
             background-color: #33ddaa;
             color: white;
             border: none;
-            border-radius: .3rem;
+            border-radius: 3rem;
             padding: .5rem 1rem;
-            font-size: 18px;
+            font-size: 0.1rem;
             cursor: pointer;
             transition: all .4s;
             @include mobile {

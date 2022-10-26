@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -107,6 +108,9 @@ h6,
 }
 .pt-128 {
   padding-top: 128px;
+}
+.mt--0 {
+  margin-top: 0px;
 }
 .mt--16 {
   margin-top: -16px;
@@ -230,6 +234,7 @@ h6,
       padding: 0;
   }
 }
+.pb-20{padding-bottom: 20px;}
 .pb-team {
   padding: 0 150px;
   margin-top: 38px;
@@ -247,6 +252,7 @@ h6,
   max-width: 1200px;
   width: 100%;
   margin: auto;
+  
 }
 
 ul, li {
@@ -314,3 +320,4 @@ body a {
   width: 100%;
   margin: 10px 0;
 }
+

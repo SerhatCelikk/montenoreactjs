@@ -38,7 +38,7 @@ const Header = () => {
     };
 
     return (
-        <header id="header_main" className={`header js-header ${scroll ? 'is-fixed' : ''}`}>
+        <header id="header_main" className={`header mb-0 js-header ${scroll ? 'is-fixed' : ''}`}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

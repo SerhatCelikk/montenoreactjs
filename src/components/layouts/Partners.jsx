@@ -12,12 +12,12 @@ const Partners = (props) => {
                     <div className="col-12">
                         <div className="block-text center">
                             <h1 className="heading-bg" data-aos="fade-in" data-aos-duration="1000"><span>Teams</span></h1>
-                            <h5 className="sub-title " data-aos="fade-up" data-aos-duration="1000">Partners</h5>
-                            <h3 className="" data-aos="fade-up" data-aos-duration="1000">We Are Partnered <br /> with Top Brands </h3>
+                            <h5 className="sub-title mt-107" data-aos="fade-up" data-aos-duration="1000">Partners</h5>
+                            <h3 className="mb-0" data-aos="fade-up" data-aos-duration="1000">We Are Partnered <br /> with Top Brands </h3>
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-0">
                     <div className="col-12">
                         <div className="partners__body" data-aos="fade-up">
                             {

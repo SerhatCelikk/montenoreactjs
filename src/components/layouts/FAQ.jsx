@@ -6,13 +6,13 @@ const FAQ = (props) => {
     const data = props.data;
 
     return (
-        <section id="faq" className="tf-section faq">
+        <section id="faq" className="tf-section faq mt-50">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="block-text center">
                             <h1 className="heading-bg" data-aos="fade-in" data-aos-duration="1000"><span>FAQ</span></h1>
-                            <h5 className="sub-title " data-aos="fade-up" data-aos-duration="1000">FAQ</h5>
+                            <h5 className="sub-title mt-107" data-aos="fade-up" data-aos-duration="1000">FAQ</h5>
                             <h3 className="" data-aos="fade-up" data-aos-duration="1000">Frequently Aksed <br /> Questions</h3>
                         </div>
                     </div>

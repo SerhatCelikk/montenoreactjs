@@ -15,11 +15,11 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="tf-section section-about">
-      <div className="container">
+    <section    className="tf-section section-about mt--0">
+      <div id="about"className="container">
         <div className="row reverse">
-          <div className="col-xl-7 col-md-12">
-            <div className="group-image">
+          <div  className="col-xl-7 col-md-12 mt-107">
+            <div  className="group-image ">
               <div className="left">
                 <div className="item ">
                   <img  src={item.item22} alt="Monteno" />
@@ -38,7 +38,8 @@ const About = () => {
           <div className="col-xl-5 col-md-12">
             <div className="block-text pt-12">
               <h5
-                className="sub-title "
+                
+                className="sub-title mt-107"
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
