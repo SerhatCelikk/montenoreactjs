@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="row">
             <div className="footer__body">
               <Link to="/">
-                <img id="The Animal Club" src={logo} alt="Monteno" data-aos="fade-down" />
+                <img id="The Animal Club" src={logo} alt="The Animal Club" data-aos="fade-down" />
               </Link>
 
               <p className="desc fs-18" data-aos="fade-up">
