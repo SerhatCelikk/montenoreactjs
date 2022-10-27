@@ -38,7 +38,7 @@ const About = () => {
           <div className="col-xl-5 col-md-12">
             <div className="block-text pt-12">
               <h5
-                
+
                 className="sub-title mt-107"
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -67,12 +67,12 @@ const About = () => {
                 {data.desc2}
               </p>
               <Link
-                to="#"
+                to="/mint"
                 className="btn-action style-2"
                 data-aos="fade-up"
                 data-aos-duration="1200"
               >
-                More About Us
+                Mint Now
               </Link>
             </div>
           </div>

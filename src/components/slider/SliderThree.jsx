@@ -11,7 +11,7 @@ const SliderThree = () => {
     })
 
     return (
-    
+
     <section className="tf-section hero-slider">
         <div className="container">
             <div className="row">
@@ -20,7 +20,7 @@ const SliderThree = () => {
                         <h6 className="sub-title mb-6" data-aos="fade-up">{datatext.subtitle}</h6>
                         <h2 className="title mb-26" data-aos="fade-up">{datatext.title} </h2>
                         <p className="desc mb-43" data-aos="fade-up">{datatext.desc} </p>
-                        <Link to="/about" className="btn-action style-2" data-aos="fade-up" data-aos-duration="1200" >Get Connected</Link>
+                        <Link to="/mint" className="btn-action style-2" data-aos="fade-up" data-aos-duration="1200" >Mint Now</Link>
                     </div>
                 </div>
                 <div className="col-xl-7 col-md-12 col-12">
@@ -28,7 +28,7 @@ const SliderThree = () => {
                         <h5 className="fs-30">Token Sale Ends In</h5>
                         <div className="countdown-container">
                             <Countdown />
-                            
+
                         </div>
                         <div className="tf-progress-bar">
                             <Progress done="73"/>
@@ -40,8 +40,8 @@ const SliderThree = () => {
                         <div className="button-action">
                             <Link to="/contact" className="btn-action style-2" >Purchase Now</Link>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -59,23 +59,23 @@ const Progress = ({done}) => {
                 opacity: 1,
                 width: `${done}%`
             }
-            
+
             setStyle(newStyle);
         }, 200);
         return () => {
             setStyle({}); // This worked for me
         };
     }, [done]);
-	
+
 	setTimeout(() => {
 		const newStyle = {
 			opacity: 1,
 			width: `${done}%`
 		}
-		
+
 		setStyle(newStyle);
 	}, 200);
-	
+
 	return (
 		<div className="progress">
 			<div className="progress-done" style={style}>

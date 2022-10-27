@@ -19,7 +19,7 @@ const SliderTwo = () => {
                             <h6 className="sub-title mb-6" data-aos="fade-up">{datatext.subtitle}</h6>
                             <h2 className="title mb-26" data-aos="fade-up">Most Popular NFT <br /> Collections</h2>
                             <p className="desc mb-53" data-aos="fade-up">{datatext.desc}</p>
-                            <Link to="/about" className="btn-action style-2" data-aos="fade-up" data-aos-duration="1200" >Get Connected</Link>
+                            <Link to="/mint" className="btn-action style-2" data-aos="fade-up" data-aos-duration="1200" >Mint Now</Link>
 
                             <div className="shape">
                                 <div className="item bg-1"><img style={{width:160, height:160}} src={item.item11} alt="Monteno" /></div>

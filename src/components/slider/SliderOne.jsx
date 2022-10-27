@@ -32,7 +32,7 @@ const SliderOne = () => {
                 data-aos="fade-up"
                 data-aos-duration="1200"
               >
-                Get Connected
+                Mint Now
               </Link>
             </div>
           </div>
@@ -54,7 +54,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item">
                     <img
-                      
+
                       src={item.item1}
                       alt="Monteno"
                     />
@@ -63,7 +63,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                      
+
                       src={item.item2}
                       alt="Monteno"
                     />
@@ -72,7 +72,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item">
                     <img
-                      
+
                       src={item.item3}
                       alt="Monteno"
                     />
@@ -81,7 +81,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                      
+
                       src={item.item4}
                       alt="Monteno"
                     />
@@ -90,7 +90,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                      
+
                       src={item.item5}
                       alt="Monteno"
                     />
@@ -100,7 +100,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item6}
                       alt="Monteno"
                     />
@@ -109,7 +109,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item14}
                       alt="Monteno"
                     />
@@ -133,7 +133,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item8}
                       alt="Monteno"
                     />
@@ -142,7 +142,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item9}
                       alt="Monteno"
                     />
@@ -151,7 +151,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item10}
                       alt="Monteno"
                     />
@@ -160,7 +160,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item11}
                       alt="Monteno"
                     />
@@ -169,7 +169,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item12}
                       alt="Monteno"
                     />
@@ -178,7 +178,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item17}
                       alt="Monteno"
                     />
@@ -187,7 +187,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item7}
                       alt="Monteno"
                     />
@@ -210,7 +210,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item15}
                       alt="Monteno"
                     />
@@ -219,7 +219,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item16}
                       alt="Monteno"
                     />
@@ -228,7 +228,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item13}
                       alt="Monteno"
                     />
@@ -237,7 +237,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item18}
                       alt="Monteno"
                     />
@@ -246,7 +246,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item19}
                       alt="Monteno"
                     />
@@ -255,7 +255,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item20}
                       alt="Monteno"
                     />
@@ -264,7 +264,7 @@ const SliderOne = () => {
                 <SwiperSlide>
                   <div className="item ">
                     <img
-                     
+
                       src={item.item21}
                       alt="Monteno"
                     />
