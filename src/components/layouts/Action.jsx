@@ -5,8 +5,8 @@ const Action = () => {
 
     const [data] = useState(
         {
-            title: 'Create Your NFT Portfolio',
-            desc: 'Get udpated with news, tips & tricks',
+            title: 'The Animal Club NFT',
+            desc: 'Get your NFT now!',
         }
     )
 
