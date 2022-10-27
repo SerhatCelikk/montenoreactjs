@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="row">
             <div className="footer__body">
               <Link to="/">
-                <img id="The Animal Club" src={logo} alt="The Animal Club" data-aos="fade-down" />
+                <img id="Animals" src={logo} alt="The Animal Club" data-aos="fade-down" />
               </Link>
 
               <p className="desc fs-18" data-aos="fade-up">
@@ -44,17 +44,17 @@ const Footer = () => {
                 cupidatat non proident, sunt in culpa qui officia dese runt
                 mollit ani
               </p>
-              <ul className="social">
+              <ul className="social" >
                 
-                <li data-aos="fade-up" data-aos-duration="1200">
+                <li >
                  <a href="https://twitter.com/animalclubnft" target="_blank">
                     <i className="fab fa-telegram" ></i>
                   </a>
-                </li><li data-aos="fade-up" data-aos-duration="1200">
+                </li><li>
                  <a href="https://twitter.com/animalclubnft" target="_blank">
                     <i className="fab fa-twitter" ></i>
                   </a>
-                </li><li data-aos="fade-up" data-aos-duration="1200">
+                </li><li>
                  <a href="https://twitter.com/animalclubnft" target="_blank">
                     <i className="fab fa-discord" ></i>
                   </a>
