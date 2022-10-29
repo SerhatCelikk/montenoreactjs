@@ -2,9 +2,11 @@
 
 .footer {
     background-image: url('https://pbs.twimg.com/profile_banners/1441809708709335040/1647176213/1500x500');
+    background-repeat: no-repeat;
+    background-size: cover;
     .footer__body {
         text-align: center;
-        padding-bottom: 105px;
+        // padding-bottom: 105px;
        
     
         border-bottom: 1px solid rgba(255,255,255,0.18);
@@ -27,6 +29,7 @@
             @include flex(center,center);
             padding-left: 0;
             margin-top: 46px;
+            margin-bottom: 46px;
             
 
             li {
