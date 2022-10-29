@@ -241,6 +241,7 @@ const Mint = () => {
                   <div className="d-flex align-items-center my-3">
                     <input
                       className={`defaultInput me-3`}
+                      style={{ borderRadius: "10px",textAlign:"center",paddingRight:'10px' }}
                       type="number"
                       min="1"
                       max={
@@ -289,7 +290,7 @@ const Mint = () => {
                     minted
                   </h5>
                   <div className="d-flex flex-column align-items-center my-3">
-                    <h3 className="fs-42">
+                    <h3 className="fs-24">
                       Presale In :{" "}
                       <span id="live">
                         {timeLeftToMint.presale === "LIVE"
@@ -306,7 +307,7 @@ const Mint = () => {
                     </h3>
                   </div>
                   <div className="d-flex flex-column align-items-center my-3 mt-0 ">
-                    <h3 className="fs-42">
+                    <h3 className="fs-24">
                       Public In :{" "}
                       <span id="live">
                         {timeLeftToMint.public === "LIVE"
